@@ -1,146 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
     android:background="#FFF1F5">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dipa Flower"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#C2185B"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnWebView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:text="Buka Web View"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#EC407A"
+        android:layout_marginBottom="16dp"/>
 
-        <!-- TITLE -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kalkulator Bangun"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#AD1457"
-            android:gravity="center"
-            android:layout_marginBottom="16dp"/>
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D81B60"/>
 
-        <!-- CARD SEGITIGA -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFFFF">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:text="Luas Segitiga"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:textColor="#C2185B"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/etAlas"
-                    android:hint="Masukkan Alas"
-                    android:inputType="numberDecimal"
-                    android:backgroundTint="#F48FB1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/etTinggi"
-                    android:hint="Masukkan Tinggi"
-                    android:inputType="numberDecimal"
-                    android:backgroundTint="#F48FB1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"/>
-
-                <Button
-                    android:id="@+id/btnSegitiga"
-                    android:text="Hitung"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#EC407A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"/>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- CARD KUBUS -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFFFF">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:text="Volume Kubus"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:textColor="#C2185B"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/etSisi"
-                    android:hint="Masukkan Sisi"
-                    android:inputType="numberDecimal"
-                    android:backgroundTint="#F48FB1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnKubus"
-                    android:text="Hitung"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#EC407A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"/>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- HASIL -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            android:backgroundTint="#FCE4EC">
-
-            <TextView
-                android:id="@+id/tvHasil"
-                android:text="Hasil akan muncul di sini"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#880E4F"
-                android:padding="20dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

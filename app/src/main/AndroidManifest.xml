@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ✅ WAJIB untuk WebView -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- WAJIB untuk WebView -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,19 +15,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dipaflower">
 
-        <!-- 🔥 TUGAS P5 (JADI HALAMAN AWAL) -->
+        <!-- WEBVIEW -->
         <activity
-            android:name=".tugasp5.FifthActivity"
+            android:name=".WebViewActivity"
+            android:exported="false" />
+
+        <!-- SPLASH SCREEN -->
+        <activity
+            android:name=".SplashScreenActivity"
             android:exported="true">
 
-            <!-- PINDAHAN DARI LOGIN -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- WEBVIEW -->
+        <!-- AUTH -->
+        <activity
+            android:name=".AuthActivity"
+            android:exported="false" />
+
+        <!-- TUGAS P5 -->
+        <activity
+            android:name=".tugasp5.FifthActivity"
+            android:exported="true" />
+
         <activity
             android:name=".tugasp5.WebViewActivity"
             android:exported="false" />
@@ -41,16 +55,17 @@
             android:name=".tugasp4.HalamanActivity"
             android:exported="false" />
 
-        <!-- LOGIN (SUDAH BUKAN HALAMAN AWAL) -->
+        <!-- TUGAS P3 -->
         <activity
             android:name=".tugasp3.LoginActivity"
             android:exported="false" />
 
-        <!-- DASHBOARD -->
-        <activity android:name=".tugasp3.DashboardActivity" />
+        <activity
+            android:name=".tugasp3.DashboardActivity" />
 
         <!-- MAIN -->
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity" />
 
     </application>
 
