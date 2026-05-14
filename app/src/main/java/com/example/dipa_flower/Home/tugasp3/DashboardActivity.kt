@@ -1,12 +1,12 @@
-package com.example.dipa_flower.tugasp3
+package com.example.dipa_flower.Home.tugasp3
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dipa_flower.MainActivity
 import com.example.dipa_flower.databinding.ActivityDashboardBinding
-import com.example.dipa_flower.tugasp4.HalamanActivity
-import com.example.dipa_flower.tugasp4.ScreenActivity
+import com.example.dipa_flower.Home.tugasp4.HalamanActivity
+import com.example.dipa_flower.Home.tugasp4.ScreenActivity
 
 class DashboardActivity : AppCompatActivity() {
 

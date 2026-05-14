@@ -1,8 +1,6 @@
-package com.example.dipa_flower
+package com.example.dipa_flower.Home.tugasp5
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dipa_flower.databinding.ActivityWebViewBinding
@@ -22,7 +20,7 @@ class WebViewActivity : AppCompatActivity() {
 
         binding.webView.settings.javaScriptEnabled = true
 
-        binding.webView.loadUrl("https://difa05.alwaysdata.net/")
+        binding.webView.loadUrl("https://www.merdeka.com")
     }
 
     override fun onBackPressed() {

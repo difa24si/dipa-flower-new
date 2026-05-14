@@ -18,7 +18,7 @@
             android:exported="false" />
         <!-- WEBVIEW -->
         <activity
-            android:name=".WebViewActivity"
+            android:name=".Home.WebViewActivity"
             android:exported="false" /> <!-- SPLASH SCREEN -->
         <activity
             android:name=".SplashScreenActivity"
@@ -33,21 +33,21 @@
             android:name=".AuthActivity"
             android:exported="false" /> <!-- TUGAS P5 -->
         <activity
-            android:name=".tugasp5.FifthActivity"
+            android:name=".Home.tugasp5.FifthActivity"
             android:exported="true" />
         <activity
-            android:name=".tugasp5.WebViewActivity"
+            android:name=".Home.tugasp5.WebViewActivity"
             android:exported="false" /> <!-- TUGAS P4 -->
         <activity
-            android:name=".tugasp4.ScreenActivity"
+            android:name=".Home.tugasp4.ScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".tugasp4.HalamanActivity"
+            android:name=".Home.tugasp4.HalamanActivity"
             android:exported="false" /> <!-- TUGAS P3 -->
         <activity
-            android:name=".tugasp3.LoginActivity"
+            android:name=".Home.tugasp3.LoginActivity"
             android:exported="false" />
-        <activity android:name=".tugasp3.DashboardActivity" /> <!-- MAIN -->
+        <activity android:name=".Home.tugasp3.DashboardActivity" /> <!-- MAIN -->
         <activity android:name=".MainActivity" />
     </application>
 
