@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F8F4">
+
+    <View
+        android:id="@+id/headerProfile"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/header_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgDev"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:padding="5dp"
+        android:src="@drawable/profile_placeholder"
+        app:layout_constraintBottom_toBottomOf="@id/headerProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerProfile"
+        app:shapeAppearanceOverlay="@style/Circle"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="4dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgDev">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvDevName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difa"
+                android:textColor="#333333"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+
+            <TextView
+                android:id="@+id/tvDevRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Developer"
+                android:textColor="#2E5A27"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="20dp"
+                android:background="#EEEEEE" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Halo! Saya adalah pengembang di balik Darurat Bencana. Fokus saya adalah menciptakan solusi teknologi yang bermanfaat bagi kemanusiaan dan mitigasi bencana di Indonesia."
+                android:textColor="#666666"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEmail"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="difa24si@mahasiswa.pcr.ac.id"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

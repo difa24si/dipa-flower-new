@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- WAJIB untuk WebView -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,59 +13,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dipaflower">
-
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
         <!-- WEBVIEW -->
         <activity
             android:name=".WebViewActivity"
-            android:exported="false" />
-
-        <!-- SPLASH SCREEN -->
+            android:exported="false" /> <!-- SPLASH SCREEN -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- AUTH -->
+        </activity> <!-- AUTH -->
         <activity
             android:name=".AuthActivity"
-            android:exported="false" />
-
-        <!-- TUGAS P5 -->
+            android:exported="false" /> <!-- TUGAS P5 -->
         <activity
             android:name=".tugasp5.FifthActivity"
             android:exported="true" />
-
         <activity
             android:name=".tugasp5.WebViewActivity"
-            android:exported="false" />
-
-        <!-- TUGAS P4 -->
+            android:exported="false" /> <!-- TUGAS P4 -->
         <activity
             android:name=".tugasp4.ScreenActivity"
             android:exported="false" />
-
         <activity
             android:name=".tugasp4.HalamanActivity"
-            android:exported="false" />
-
-        <!-- TUGAS P3 -->
+            android:exported="false" /> <!-- TUGAS P3 -->
         <activity
             android:name=".tugasp3.LoginActivity"
             android:exported="false" />
-
-        <activity
-            android:name=".tugasp3.DashboardActivity" />
-
-        <!-- MAIN -->
-        <activity
-            android:name=".MainActivity" />
-
+        <activity android:name=".tugasp3.DashboardActivity" /> <!-- MAIN -->
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

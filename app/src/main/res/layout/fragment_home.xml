@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F8F4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/header_bg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:text="Selamat Datang"
+            android:textColor="#CCFFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Darurat Bencana"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvGreeting"
+            app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
+
+        <TextView
+            android:id="@+id/avatarCircle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/avatar_bg"
+            android:gravity="center"
+            android:text="AJ"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvGreeting" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/search_bg"
+            android:drawablePadding="12dp"
+            android:hint="Apa yang anda cari?"
+            android:paddingStart="16dp"
+            android:textColorHint="#99FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerCard"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/banner_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader">
+
+            <TextView
+                android:id="@+id/badgeFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/badge_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="Apa Kejadian Hari ini"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPromoTitle"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="serif"
+                android:text="Butuh Sesuatu"
+                android:textColor="#332D15"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/badgeFlash"
+                app:layout_constraintTop_toBottomOf="@id/badgeFlash" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#2E5A27"
+                android:text="Klik Sini"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvPromoTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvCategoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="serif"
+            android:text="Fitur"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/bannerCard"
+            app:layout_constraintTop_toBottomOf="@id/bannerCard" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridFeatures"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:columnCount="2"
+            app:layout_constraintEnd_toEndOf="@id/bannerCard"
+            app:layout_constraintStart_toStartOf="@id/bannerCard"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoryLabel">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWebView"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                android:text="Web View Bina Desa"
+                android:textAllCaps="false"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:iconGravity="top"
+                app:iconPadding="8dp"
+                app:iconSize="40dp"
+                app:iconTint="@null"
+                app:layout_columnWeight="1"
+                app:strokeColor="#F0F0F0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKalku"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                android:text="Kalkulator"
+                android:textAllCaps="false"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:iconGravity="top"
+                app:iconPadding="8dp"
+                app:iconSize="40dp"
+                app:iconTint="@null"
+                app:layout_columnWeight="1"
+                app:strokeColor="#F0F0F0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHalaman"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                android:text="Halaman"
+                android:textAllCaps="false"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:iconGravity="top"
+                app:iconPadding="8dp"
+                app:iconSize="40dp"
+                app:iconTint="@null"
+                app:layout_columnWeight="1"
+                app:strokeColor="#F0F0F0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScreen"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                android:text="Screen"
+                android:textAllCaps="false"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:iconGravity="top"
+                app:iconPadding="8dp"
+                app:iconSize="40dp"
+                app:iconTint="@null"
+                app:layout_columnWeight="1"
+                app:strokeColor="#F0F0F0" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
