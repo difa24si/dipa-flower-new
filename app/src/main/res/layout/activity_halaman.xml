@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDEDED">
+    android:background="#FFF8F0">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,128 +11,123 @@
         android:orientation="vertical">
 
         <!-- HEADER -->
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:background="#4DB6AC">
+            android:layout_height="280dp"
+            android:background="#FF8C42">
 
-            <!-- Foto Profile -->
             <ImageView
                 android:id="@+id/profileImage"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/profile_placeholder"
-                android:scaleType="centerCrop" />
+                android:layout_marginTop="50dp"
+                android:background="#FFFFFF"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_placeholder" />
 
-            <!-- Nama -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome Jeegar goyani"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:layout_below="@id/profileImage"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="12dp"/>
-        </RelativeLayout>
-
-        <!-- GREETING -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Good Afternoon"
-            android:padding="16dp"
-            android:textAlignment="textEnd"
-            android:textStyle="bold"/>
-
-        <!-- JAM BULAT -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+                android:layout_marginTop="15dp"
+                android:text="Selamat Datang Warga Desa"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:gravity="center"
-                android:text="09:30"
-                android:textSize="18sp"/>
-        </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Portal Informasi Desa"
+                android:textColor="#FFF3E0"
+                android:textSize="14sp" />
 
-        <!-- TASK LIST TITLE -->
+        </RelativeLayout>
+
+        <!-- INFORMASI DESA -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Task list"
-            android:textStyle="bold"
-            android:padding="16dp"/>
+            android:padding="20dp"
+            android:text="📢Informasi Desa"
+            android:textColor="#FF8C42"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-        <!-- CARD TASK -->
+        <!-- CARD AGENDA -->
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp">
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
-                <!-- Header Task -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Daily Task"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+"
-                        android:textSize="24sp"
-                        android:textColor="#4DB6AC"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <!-- LIST TASK -->
-                <CheckBox
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Learning Programming by 12PM"
-                    android:checked="true"/>
+                    android:text="🗓 Agenda Desa"
+                    android:textColor="#FF8C42"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Learn how to cook by 1PM"/>
+                    android:layout_marginTop="10dp"
+                    android:text="Musyawarah Desa" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Learn how to play at 2PM"/>
+                    android:text="Gotong Royong Desa" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Have lunch at 4PM"/>
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Going to travel 6PM"/>
+                    android:text="Pembagian Bantuan Desa" />
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
+        <!-- JUDUL BERITA -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingBottom="10dp"
+            android:text="📰 Berita Desa Terbaru"
+            android:textColor="#FF8C42"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- RECYCLERVIEW -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNews"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginHorizontal="10dp"
+            android:nestedScrollingEnabled="false" />
+
     </LinearLayout>
+
 </ScrollView>
