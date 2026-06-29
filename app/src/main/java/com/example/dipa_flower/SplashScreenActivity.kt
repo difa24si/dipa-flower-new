@@ -23,30 +23,42 @@ class SplashScreenActivity : AppCompatActivity() {
                 MODE_PRIVATE
             )
 
-            val isLogin = sharedPref.getBoolean(
-                "isLogin",
-                false
+            val isFirstRun = sharedPref.getBoolean(
+                "isFirstRun",
+                true
             )
 
-            // Jika sudah login
-            if (isLogin) {
-
+            if (isFirstRun) {
+                // Tampilkan Onboarding Screen terlebih dahulu
                 startActivity(
                     Intent(
                         this@SplashScreenActivity,
-                        BaseActivity::class.java
+                        OnboardingActivity::class.java
                     )
                 )
-
             } else {
-
-                // Jika belum login
-                startActivity(
-                    Intent(
-                        this@SplashScreenActivity,
-                        AuthActivity::class.java
-                    )
+                val isLogin = sharedPref.getBoolean(
+                    "isLogin",
+                    false
                 )
+
+                // Jika sudah login
+                if (isLogin) {
+                    startActivity(
+                        Intent(
+                            this@SplashScreenActivity,
+                            BaseActivity::class.java
+                        )
+                    )
+                } else {
+                    // Jika belum login
+                    startActivity(
+                        Intent(
+                            this@SplashScreenActivity,
+                            AuthActivity::class.java
+                        )
+                    )
+                }
             }
 
             finish()

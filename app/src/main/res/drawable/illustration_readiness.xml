@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+  <path
+      android:pathData="M 100 100 m -80 0 a 80 80 0 1 0 160 0 a 80 80 0 1 0 -160 0"
+      android:fillColor="#1A2E5A27"/>
+  <!-- Clipboard shape -->
+  <path
+      android:pathData="M65,55 H135 C140,55 145,60 145,65 V145 C145,150 140,155 135,155 H65 C60,155 55,150 55,145 V65 C55,60 60,55 65,55 Z"
+      android:fillColor="#FFFFFF"
+      android:strokeWidth="4"
+      android:strokeColor="#2E5A27"/>
+  <!-- Clipboard clip -->
+  <path
+      android:pathData="M85,45 H115 V60 H85 Z"
+      android:fillColor="#2E5A27"/>
+  <!-- Checkbox items -->
+  <path
+      android:pathData="M70,80 H78 V88 H70 Z M70,105 H78 V113 H70 Z M70,130 H78 V138 H70 Z"
+      android:fillColor="#E8F5E9"
+      android:strokeWidth="2"
+      android:strokeColor="#2E5A27"/>
+  <!-- Text lines next to checklist -->
+  <path
+      android:pathData="M90,84 H130 M90,109 H130 M90,134 H130"
+      android:strokeWidth="3.5"
+      android:strokeLineCap="round"
+      android:strokeColor="#B0BEC5"/>
+  <!-- Checked marks -->
+  <path
+      android:pathData="M68,84 L72,88 L80,78 M68,109 L72,113 L80,103"
+      android:strokeWidth="2.5"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"
+      android:strokeColor="#2E5A27"/>
+</vector>

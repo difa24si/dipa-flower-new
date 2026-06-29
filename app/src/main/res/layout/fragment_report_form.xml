@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F8F4"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Buat Laporan Baru"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFormSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Isi formulir di bawah ini dengan informasi yang valid."
+            android:textColor="#78909C"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFormTitle" />
+
+        <!-- Disaster Type Spinner Label -->
+        <TextView
+            android:id="@+id/lblDisasterType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Jenis Kejadian Bencana"
+            android:textColor="#37474F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFormSub" />
+
+        <Spinner
+            android:id="@+id/spinnerDisasterType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg"
+            android:backgroundTint="#FFFFFF"
+            android:paddingHorizontal="12dp"
+            app:layout_constraintTop_toBottomOf="@id/lblDisasterType" />
+
+        <!-- Location input -->
+        <TextView
+            android:id="@+id/lblLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Lokasi Detail Kejadian"
+            android:textColor="#37474F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerDisasterType" />
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Contoh: RT 02 / RW 04 Dusun Melati"
+            android:inputType="text"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#90A4AE"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lblLocation" />
+
+        <!-- Date input -->
+        <TextView
+            android:id="@+id/lblDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tanggal Kejadian"
+            android:textColor="#37474F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLocation" />
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Contoh: 29 Juni 2026"
+            android:inputType="text"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#90A4AE"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lblDate" />
+
+        <!-- Reporter input -->
+        <TextView
+            android:id="@+id/lblReporter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nama Pelapor / Relawan"
+            android:textColor="#37474F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etDate" />
+
+        <EditText
+            android:id="@+id/etReporter"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Masukkan nama lengkap pelapor"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#90A4AE"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lblReporter" />
+
+        <!-- Description input -->
+        <TextView
+            android:id="@+id/lblDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Deskripsi Kejadian Bencana"
+            android:textColor="#37474F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etReporter" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="top"
+            android:hint="Tulis rincian kejadian dan dampak yang ditimbulkan..."
+            android:inputType="textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#90A4AE"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lblDescription" />
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#2E5A27"
+            android:text="Simpan Laporan"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

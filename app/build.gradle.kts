@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -30,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures{
         viewBinding = true
@@ -50,4 +52,19 @@ dependencies {
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
 
-}
+    // Room Database
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt("androidx.room:room-compiler:2.8.4")
+
+    // Retrofit & Gson
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.gson)
+
+    // Glide for image loading
+    implementation(libs.glide.core)
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
+
+    // WorkManager
+    implementation(libs.androidx.work)
+}

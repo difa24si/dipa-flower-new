@@ -15,11 +15,13 @@ class WebViewActivity : AppCompatActivity() {
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val url = intent.getStringExtra("url") ?: "https://difa05.alwaysdata.net/"
+
         // 1. Setup WebView
         binding.webView.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true
-            loadUrl("https://difa05.alwaysdata.net/")
+            loadUrl(url)
         }
 
         // 2. AKTIFKAN TOMBOL BACK DI XML (Penting!)

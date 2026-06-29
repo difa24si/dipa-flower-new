@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+  <!-- Gradient background circle -->
+  <path
+      android:pathData="M 100 100 m -80 0 a 80 80 0 1 0 160 0 a 80 80 0 1 0 -160 0"
+      android:fillColor="#1A2E5A27"/>
+  <!-- Decorative grid lines -->
+  <path
+      android:pathData="M20,100 L180,100 M100,20 L100,180"
+      android:strokeWidth="1"
+      android:strokeColor="#10000000"/>
+  <!-- Safety shield -->
+  <path
+      android:pathData="M100,45 L60,60 V110 C60,140 78,165 100,175 C122,165 140,140 140,110 V60 L100,45 Z"
+      android:fillColor="#E8F5E9"
+      android:strokeWidth="4"
+      android:strokeColor="#2E5A27"/>
+  <!-- Home vector inside shield -->
+  <path
+      android:pathData="M100,75 L75,95 H90 V130 H110 V95 H125 L100,75 Z"
+      android:fillColor="#2E5A27"/>
+</vector>

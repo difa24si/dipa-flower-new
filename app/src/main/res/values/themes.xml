@@ -7,5 +7,8 @@
     <style name="Circle">
         <item name="cornerSize">50%</item>
     </style>
+    <style name="Rounded12">
+        <item name="cornerSize">12dp</item>
+    </style>
     <style name="Theme.Dipaflower" parent="Base.Theme.Dipaflower" />
 </resources>

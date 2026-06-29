@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+  <path
+      android:pathData="M 100 100 m -80 0 a 80 80 0 1 0 160 0 a 80 80 0 1 0 -160 0"
+      android:fillColor="#1A2E5A27"/>
+  <!-- Newspaper card shape -->
+  <path
+      android:pathData="M60,60 H140 V140 H60 Z"
+      android:fillColor="#FFFFFF"
+      android:strokeWidth="4"
+      android:strokeColor="#2E5A27"/>
+  <!-- Newspaper detail lines -->
+  <path
+      android:pathData="M70,80 H110 M70,95 H130 M70,110 H130 M70,125 H100"
+      android:strokeWidth="4"
+      android:strokeLineCap="round"
+      android:strokeColor="#2E5A27"/>
+  <!-- Alert badge -->
+  <path
+      android:pathData="M 130 75 m -15 0 a 15 15 0 1 0 30 0 a 15 15 0 1 0 -30 0"
+      android:fillColor="#D32F2F"/>
+  <!-- Exclamation in badge -->
+  <path
+      android:pathData="M130,68 V75 M130,79 V81"
+      android:strokeWidth="2.5"
+      android:strokeLineCap="round"
+      android:strokeColor="#FFFFFF"/>
+</vector>
