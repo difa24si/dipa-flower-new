@@ -88,6 +88,11 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), com.example.dipa_flower.report.DisasterReportActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnReminder.setOnClickListener {
+            val intent = Intent(requireContext(), com.example.dipa_flower.reminder.ReminderManagerActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupRecyclerView() {

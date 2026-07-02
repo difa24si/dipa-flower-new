@@ -10,8 +10,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @Database(
-    entities = [ChecklistEntity::class, FavoriteNewsEntity::class, DisasterReportEntity::class],
-    version = 2,
+    entities = [ChecklistEntity::class, FavoriteNewsEntity::class, DisasterReportEntity::class, CustomReminderEntity::class],
+    version = 3,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -19,6 +19,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun checklistDao(): ChecklistDao
     abstract fun favoriteNewsDao(): FavoriteNewsDao
     abstract fun disasterReportDao(): DisasterReportDao
+    abstract fun customReminderDao(): CustomReminderDao
 
     companion object {
         @Volatile

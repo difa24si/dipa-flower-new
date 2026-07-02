@@ -216,6 +216,28 @@
                 app:iconSize="28dp"
                 app:layout_columnWeight="1"
                 app:strokeColor="#E0E0E0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReminder"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Pengingat Mandiri (Alarm)"
+                android:textAllCaps="false"
+                android:textColor="#2E5A27"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_clock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconSize="24dp"
+                app:iconTint="#2E5A27"
+                app:layout_columnWeight="1"
+                app:layout_columnSpan="2"
+                app:strokeColor="#E0E0E0" />
         </androidx.gridlayout.widget.GridLayout>
 
         <!-- Local Disaster Reports Section -->
