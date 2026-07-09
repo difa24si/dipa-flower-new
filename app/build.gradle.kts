@@ -6,11 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.dipa_flower"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.dipa_flower"
@@ -32,8 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
     }
     buildFeatures{
         viewBinding = true
@@ -67,4 +66,15 @@ dependencies {
 
     // WorkManager
     implementation(libs.androidx.work)
-}
+
+    // ZXing for QR Code
+    implementation("com.google.zxing:core:3.5.2")
+
+    // CameraX
+    implementation("androidx.camera:camera-camera2:1.3.3")
+    implementation("androidx.camera:camera-lifecycle:1.3.3")
+    implementation("androidx.camera:camera-view:1.3.3")
+    
+    // ML Kit untuk QR code (ringan, offline)
+    implementation("com.google.mlkit:barcode-scanning:17.2.0")
+}

@@ -20,6 +20,7 @@ import com.example.dipa_flower.data.db.FavoriteNewsEntity
 import com.example.dipa_flower.data.model.News
 import com.example.dipa_flower.databinding.FragmentHomeBinding
 import com.example.dipa_flower.receiver.ReminderReceiver
+import com.example.dipa_flower.Home.pertemuan_13.ThirteenthActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -91,6 +92,11 @@ class HomeFragment : Fragment() {
 
         binding.btnReminder.setOnClickListener {
             val intent = Intent(requireContext(), com.example.dipa_flower.reminder.ReminderManagerActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
     }
