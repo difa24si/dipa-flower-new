@@ -55,7 +55,7 @@
             app:layout_constraintTop_toTopOf="@+id/tvGreeting"
             app:shapeAppearanceOverlay="@style/Circle" />
 
-        <!-- Status Card (Ringkasan Informasi) -->
+        <!-- Status Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/statusCard"
             android:layout_width="match_parent"
@@ -97,23 +97,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Potensi cuaca ekstrem dan curah hujan tinggi di wilayah Jawa Barat. Pastikan tas siaga bencana siap."
+                        android:text="Potensi cuaca ekstrem dan curah hujan tinggi di wilayah Jawa Barat."
                         android:textColor="#37474F"
                         android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Lapor Kejadian Terkini »"
-                        android:textColor="#C62828"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Quick Access Buttons Section -->
         <TextView
             android:id="@+id/tvQuickAccessLabel"
             android:layout_width="wrap_content"
@@ -139,108 +129,67 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnMitigasi"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Panduan\nMitigasi"
-                android:textAllCaps="false"
-                android:textColor="#2E5A27"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:cornerRadius="16dp"
+                android:text="Panduan&#10;Mitigasi"
                 app:icon="@drawable/ic_mitigation"
                 app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="28dp"
-                app:layout_columnWeight="1"
-                app:strokeColor="#E0E0E0" />
+                app:layout_columnWeight="1" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEvakuasi"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Lokasi\nEvakuasi"
-                android:textAllCaps="false"
-                android:textColor="#2E5A27"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:cornerRadius="16dp"
+                android:text="Lokasi&#10;Evakuasi"
                 app:icon="@drawable/ic_evacuation"
                 app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="28dp"
-                app:layout_columnWeight="1"
-                app:strokeColor="#E0E0E0" />
+                app:layout_columnWeight="1" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnChecklist"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Checklist\nDarurat"
-                android:textAllCaps="false"
-                android:textColor="#2E5A27"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:cornerRadius="16dp"
+                android:text="Checklist&#10;Darurat"
                 app:icon="@drawable/ic_checklist"
                 app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="28dp"
-                app:layout_columnWeight="1"
-                app:strokeColor="#E0E0E0" />
+                app:layout_columnWeight="1" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnKontak"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Kontak\nDarurat"
-                android:textAllCaps="false"
-                android:textColor="#2E5A27"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:cornerRadius="16dp"
+                android:text="Kontak&#10;Darurat"
                 app:icon="@drawable/ic_phone"
                 app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="28dp"
-                app:layout_columnWeight="1"
-                app:strokeColor="#E0E0E0" />
+                app:layout_columnWeight="1" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnReminder"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_margin="8dp"
-                android:backgroundTint="#FFFFFF"
                 android:text="Pengingat Mandiri (Alarm)"
-                android:textAllCaps="false"
-                android:textColor="#2E5A27"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:cornerRadius="16dp"
                 app:icon="@drawable/ic_clock"
-                app:iconGravity="textStart"
-                app:iconPadding="8dp"
-                app:iconSize="24dp"
-                app:iconTint="#2E5A27"
-                app:layout_columnWeight="1"
                 app:layout_columnSpan="2"
-                app:strokeColor="#E0E0E0" />
+                app:layout_columnWeight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPertemuan13"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:text="Pertemuan 13"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:layout_columnSpan="2"
+                app:layout_columnWeight="1" />
+
         </androidx.gridlayout.widget.GridLayout>
 
-        <!-- Local Disaster Reports Section -->
+        <!-- Laporan Kejadian -->
         <LinearLayout
             android:id="@+id/reportsHeaderLayout"
             android:layout_width="match_parent"
@@ -254,10 +203,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="serif"
                 android:text="Laporan Kejadian Terkini"
-                android:textColor="#333333"
-                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -266,8 +212,8 @@
                 android:layout_height="wrap_content"
                 android:text="Lihat Semua"
                 android:textColor="#2E5A27"
-                android:textSize="12sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -283,16 +229,12 @@
             android:id="@+id/tvNoHomeReports"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Belum ada laporan kejadian bencana."
-            android:textColor="#90A4AE"
-            android:textSize="13sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/reportsHeaderLayout" />
-
-        <!-- Latest News Section -->
+        <!-- Berita Section -->
         <LinearLayout
             android:id="@+id/newsHeaderLayout"
             android:layout_width="match_parent"
@@ -300,16 +242,13 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/rvHomeReports">
+            app:layout_constraintTop_toBottomOf="@id/gridFeatures">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="serif"
-                android:text="Berita Kebencanaan Terbaru"
-                android:textColor="#333333"
-                android:textSize="18sp"
+                android:text="Berita Terbaru"
                 android:textStyle="bold" />
 
             <TextView
@@ -318,7 +257,6 @@
                 android:layout_height="wrap_content"
                 android:text="Lihat Semua"
                 android:textColor="#2E5A27"
-                android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -328,19 +266,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
-            android:nestedScrollingEnabled="false"
-            app:layout_constraintTop_toBottomOf="@id/newsHeaderLayout"
-            tools:listitem="@layout/item_news" />
+            app:layout_constraintTop_toBottomOf="@id/newsHeaderLayout" />
 
         <ProgressBar
             android:id="@+id/progressHomeNews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:indeterminateTint="#2E5A27"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/newsHeaderLayout" />
+            app:layout_constraintTop_toBottomOf="@id/rvLatestNews" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

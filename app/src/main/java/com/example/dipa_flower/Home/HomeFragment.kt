@@ -92,7 +92,7 @@ class HomeFragment : Fragment() {
 
         binding.btnReminder.setOnClickListener {
             val intent = Intent(requireContext(), com.example.dipa_flower.reminder.ReminderManagerActivity::class.java)
-            startActivity(intent)
+                startActivity(intent)
         }
 
         binding.btnPertemuan13.setOnClickListener {
